@@ -2,4 +2,7 @@
 <resources>
         <string name="app_name">AndroidLabs</string>
         <string name="hello_message">Bonjour!</string>
+        <string name="button_text">Je suis un button!</string>
+        <string name="login_text">Login</string>
+        <string name="pass_text">Password</string>
 </resources>
