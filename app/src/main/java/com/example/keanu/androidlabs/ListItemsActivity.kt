@@ -8,10 +8,7 @@ import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
-import android.widget.CheckBox
-import android.widget.ImageButton
-import android.widget.Switch
-import android.widget.Toast
+import android.widget.*
 
 class ListItemsActivity : Activity() {
 
@@ -52,17 +49,17 @@ class ListItemsActivity : Activity() {
 
         var checkBox = findViewById<CheckBox>(R.id.checkBox20)
 
-        checkBox.setOnCheckedChangeListener {
+        checkBox.setOnCheckedChangeListener { e, f ->
             var builder = AlertDialog.Builder(this)
             builder.setMessage("")
                     .setTitle("Do you want to quit?")
-                    .setPositiveButton("Ok") {
+                    .setPositiveButton("Ok") { dialog, id ->
                         val resultIntent = Intent()
                         resultIntent.putExtra("Response","This is my response")
                         setResult(Activity.RESULT_OK,resultIntent)
                         finish()
                     }
-                    .setNegativeButton("Cancel") {
+                    .setNegativeButton("Cancel") { dialog, id ->
 
                     }
                     .show()
@@ -107,4 +104,6 @@ class ListItemsActivity : Activity() {
         super.onDestroy()
 
     }
+
 }
+

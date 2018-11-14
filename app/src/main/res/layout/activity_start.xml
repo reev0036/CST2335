@@ -22,4 +22,16 @@
         android:layout_height="wrap_content"
         android:text="@string/button_text" />
 
+    <Button
+        android:id="@+id/startChatButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_chat_text" />
+
+    <Button
+        android:id="@+id/viewWeatherButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_weather" />
+
 </LinearLayout>

@@ -14,12 +14,26 @@ class StartActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
-        var button = findViewById<Button>(R.id.button1
-        )
+        var button = findViewById<Button>(R.id.button1)
 
         button.setOnClickListener{
             var intent = Intent(this@StartActivity,ListItemsActivity::class.java)
             startActivityForResult(intent, 50)
+        }
+
+        var startChatButton = findViewById<Button>(R.id.startChatButton)
+
+        startChatButton.setOnClickListener{
+            Log.i(ACTIVITY_NAME, "User clicked Start Chat")
+            var intent = Intent(this@StartActivity,ChatWindow::class.java)
+            startActivityForResult(intent,50)
+        }
+
+        var startWeather = findViewById<Button>(R.id.viewWeatherButton)
+
+        startWeather.setOnClickListener{
+            var intent = Intent(this@StartActivity,WeatherForecast::class.java)
+            startActivityForResult(intent,50)
         }
 
     }
@@ -27,8 +41,9 @@ class StartActivity : Activity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == 50)
+        if (requestCode == 50) {
             Log.i(ACTIVITY_NAME, "Returned to StartActivity.onActivityResult")
+        }
 
     }
 

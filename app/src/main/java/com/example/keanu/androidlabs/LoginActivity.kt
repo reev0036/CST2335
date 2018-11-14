@@ -35,7 +35,6 @@ class LoginActivity : Activity() {
             startActivity(intent)
         }
 
-
     }
 
     override fun onResume() {
